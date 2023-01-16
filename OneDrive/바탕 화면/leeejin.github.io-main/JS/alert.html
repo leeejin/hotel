@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .alert {
+            border-radius: 5px;
+            padding: 10px;
+            display: block;
+            max-width: 550px;
+            margin: 10px;
+        }
+
+        .alert p {
+            width: 90%;
+            float: left;
+        }
+
+        .alert button {
+            width: 10%;
+            float: right;
+        }
+
+        .yellow {
+            background: rgb(255, 234, 138);
+            color: rgb(170, 145, 0);
+            border: none;
+        }
+
+        .blue {
+            background: rgb(126, 175, 248);
+            color: rgb(0, 69, 134);
+            border: none;
+        }
+
+        .grey {
+            background: rgb(170, 170, 170);
+            color: grey;
+            border: none;
+        }
+
+        .red {
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            background: red;
+            color: white;
+            border: none;
+            float: left;
+        }
+
+        .close {
+            font-size: 25px;
+        }
+    </style>
+    <div class="alert yellow">
+        <p>
+            <strong>Holy guacamole!</strong>
+            You should check in on some of those fields below.
+
+        </p>
+        <button class="close yellow" onclick="알림창(0,'none')">X</button>
+        <div style="clear:both"></div>
+    </div>
+    <div class="alert blue">
+        <p>
+            <strong>Holy guacamole!</strong>
+            You should check in on some of those fields below.
+
+        </p>
+        <button class="close blue" onclick="알림창(1,'none')">X</button>
+        <div style="clear:both"></div>
+    </div>
+    <div class="alert grey">
+        <p>
+            <strong>Holy guacamole!</strong>
+            You should check in on some of those fields below.
+
+        </p>
+        <button class="close grey" onclick="알림창(2,'none')">X</button>
+        <div style="clear:both"></div>
+    </div>
+    <div>
+        <button class="red" onclick="알림창(0,'block')">버튼1</button>
+        <button class="red" onclick="알림창(1,'block')">버튼2</button>
+        <button class="red" onclick="알림창(2,'block')">버튼3</button>
+        <button class="red" onclick="모든알림창('block')">모두O</button>
+        <button class="red" onclick="모든알림창('none')">모두X</button>
+        <div style="clear:both"></div>
+    </div>
+
+    <script>
+        // function 알림창(아이디, 구멍) {
+        //    document.getElementById(아이디).style.display = 구멍;
+        // } 
+        function 알림창(숫자,구멍){
+            document.querySelectorAll('.alert')[숫자].style.display =구멍;
+        }
+        function 모든알림창(구멍) {
+            for(let i=0; i<3; i++)
+            document.querySelectorAll('.alert')[i].style.display = 구멍;
+        } 
+        
+        
+    </script>
+</body>
+
+</html>
