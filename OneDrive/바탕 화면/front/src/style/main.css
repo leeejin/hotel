@@ -1,0 +1,103 @@
+.wrap {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modalcontents {
+    display: block;
+    position: fixed;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color-safe {
+    color: blue;
+}
+
+.color-deadline {
+    color: #ff3e34;
+}
+
+.color-btn {
+    color: #3a0409;
+}
+
+.cancel-btn {
+    color: grey;
+}
+
+.list-item {
+    width: 33.3%;
+    float: left;
+    padding: 10px;
+    display: 'inline-block';
+}
+
+.content {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin:0;
+}
+.cost{
+    margin:0;
+    font-size: 16pt;
+    font-weight: bold;
+}
+.nav-link {
+    color: grey;
+}
+
+.checked {
+    color: black;
+}
+
+.search-form {
+    position: relative;
+    height: 40px;
+}
+
+.search-input {
+    position: absolute;
+    right: 0px;
+}
+
+.search-button {
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.search-button img:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    body {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+    
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .list-item {
+        width: 100%;
+    }
+}

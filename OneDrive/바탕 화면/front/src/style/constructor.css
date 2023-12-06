@@ -1,0 +1,36 @@
+div {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../components/images/backgroundhotel.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+.textcenter {
+    text-align: center;
+}
+
+.top {
+    width: 100%;
+    position: fixed;
+    
+    top: 0px;
+    z-index: 5;
+}
+
+.middle {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: auto;
+    width: 70%;
+    min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정 */
+    padding: 10px;
+    overflow-y: auto; /* 스크롤 활성화 */
+  }
+.middle .component {
+    margin-top: 70px;
+}
